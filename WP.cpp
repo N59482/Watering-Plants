@@ -1,12 +1,11 @@
-#include<iostream>
-#include<vector>
-
-using namespace std;
+// Задача с сайте leedcode № 2079 Ссылка : https://leetcode.com/problems/watering-plants/
 
 int wateringPlants(vector<int>& plants, int capacity) 
     {
         int water = capacity; // количество воды в лейке
         int steps = 0; // всего шагов
+        // по условию изначальное положение игрока = -1(река) а также max(plants[i]) <= capacity
+        // значит steps всегда больше 1.
 
         for(int i = 0; i < plants.size(); i++) //идём по грядке 
             {
@@ -22,9 +21,3 @@ int wateringPlants(vector<int>& plants, int capacity)
             };
         return steps;
     };
-
-int main()
-    {
-        
-    };
-
